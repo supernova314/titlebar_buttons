@@ -187,10 +187,11 @@ class _RawDecoratedTitlebarButtonState
     final prefix = 'packages/titlebar_buttons/assets/themes'
         '/$themeName$themeColor/';
 
-    final themePath = prefix +
-        (File(prefix + fileName).existsSync()
-            ? fileName
-            : '${widget.name}.svg');
+    // final themePath = prefix +
+    //     (File(prefix + fileName).existsSync()
+    //         ? fileName
+    //         : '${widget.name}.svg');
+    final themePath = prefix + fileName;
 
     void onEntered({required bool hover}) => setState(
           () => isHovering = hover,
